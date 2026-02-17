@@ -2,9 +2,10 @@ from flask import Flask, request, jsonify
 import os
 import pandas as pd
 from docx import Document
-from flask_cors import CORS CORS(app)
+from flask_cors import CORS 
 
 app = Flask(__name__)
+CORS(app)
 
 UPLOAD_FOLDER = "uploads"
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
@@ -76,4 +77,5 @@ def home():
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
+
 
