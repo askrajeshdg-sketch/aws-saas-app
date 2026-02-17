@@ -2,6 +2,7 @@ from flask import Flask, request, jsonify
 import os
 import pandas as pd
 from docx import Document
+from flask_cors import CORS CORS(app)
 
 app = Flask(__name__)
 
@@ -75,3 +76,4 @@ def home():
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
+
